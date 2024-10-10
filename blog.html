@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SkyBBS</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+<body>
+<style>
+  p.margin
+  {
+    margin:0px 30px;
+  }
+</style>
+<style>
+  button.example1 {
+    padding: -10px 50px;
+    background: rgb(86, 175, 241);
+    width: 90px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  button.example1:hover {
+    background: rgb(66, 145, 211);
+  }
+</style>
+
+<div id="msg" class="msg">
+  <img src="img/logo.png" alt="logo">
+  <h2>SkyBBS</h2>
+</div>
+<div class="header">
+  <div class="doc">
+    <div class="dropdown">
+      <p class="dropbtn" style="color: white;margin-right: 100px;">帮助</p>
+      <ul class="dropdown-content" >
+        <li><a href="help.html">使用方法</a></li>
+        <li><a href="#example">与我们联系</a></li>
+        <li><a href="https://github.com/Aurora-Studio-Team/SkyBBS">Github</a></li>
+        <li><a href="blog.html">关于</a></li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <p class="dropbtn" style="color: white;margin-right: 80px;">导航</p>
+      <ul class="dropdown-content" >
+        <li><a href="index.html">主页</a></li>
+        <li><a href="login.html">登陆/注册</a></li>
+        <li><a href="#home">个人中心</a></li>
+        <li><a href="#about">发帖</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="blog">
+  <div id="blogging">
+    <input type="text" placeholder="标题" v-model="newTitle">
+    <textarea placeholder="内容" v-model="newContent" style="margin: 10px auto;"></textarea>
+    <button class="example1" v-on:click="addBlog()" style="margin: 10px auto;">发布</button>
+  </div>
+  <div v-if="blogs.length == 0">
+    <p>还没有发布任何帖子...</p>
+  </div>
+  <div v-for="(blog, index) in blogs" :key="index">
+    <h2>{{ blog.title }}</h2>
+    <p>{{ blog.content }}</p>
+    <p>发布日期：{{ blog.createtime }}</p>
+    <p>作者：{{ blog.author }}</p> <!-- 显示作者信息 -->
+    <p> </p>
+    <div v-for="(reply, rIndex) in blog.reply" :key="rIndex">
+      <p class="margin"><strong>{{ reply.name }}:</strong> {{ reply.content }}</p> <!-- 显示回复者的用户名 -->
+      <p class="margin">回复日期：{{ reply.createtime }}</p>
+      <button class="example1" v-on:click="deleteReply(index, rIndex)">删除此回复</button>
+      <p> </p>
+    </div>
+    <textarea placeholder="回复内容" v-model="replyContents[index]" style="margin-top: 10px;"></textarea>
+    <button class="example1" v-on:click="replyBlog(index)">回复</button>
+    <button class="example1" v-on:click="deleteBlog(index)">删除</button>
+  </div>
+</div>
+
+
+
+<script src="js/app.js"></script>
+</body>
+</html>

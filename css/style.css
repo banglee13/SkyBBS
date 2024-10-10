@@ -245,13 +245,17 @@ textarea {
   }
 }
 .msg{
-  background-color:lightskyblue;
+  background-color: #ff8331;
   text-align: center;
   color:white;
+  display: flex;
+  align-items: center;
+  margin:-10px -8px;
 }
 .header {
   overflow: hidden;
   background-color: darkslateblue;
+  margin:-0px -8px;
 }
 .doc ul {
   list-style-type: none;
@@ -273,12 +277,11 @@ textarea {
 /* 鼠标悬停时显示下拉内容 */
 .dropdown:hover .dropdown-content {
   display:block;
-
+  color: yellow;
   .dropdown-content li{
     float: left;
     display: block; /* 设置为行内元素，水平排列 */
     margin-left: 20px; /* 设置列表项之间的间距 */}
-  color: yellow;
 }
 .doc {
   float: right;
@@ -287,6 +290,7 @@ textarea {
   float: left;
   display: block; /* 设置为行内元素，水平排列 */
   margin-left: 40px; /* 设置列表项之间的间距 */
+  text-align: center;
 }
 
 .doc li a {
@@ -301,4 +305,20 @@ textarea {
 }
 a {
   text-decoration: none; /* 去掉所有链接的下划线 */
+}
+input{
+  display: block;
+  float: none;
+  margin: 10px auto;
+  padding: 10px;
+}
+textarea{
+  display: block;
+  float: none;
+  padding: 10px;
+}
+button {
+  display: block;
+  float: none;
+  padding: 10px;
 }

@@ -1,0 +1,91 @@
+<!doctype html>
+<!--suppress ALL -->
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+<style>
+  button.example1 {
+    padding: -10px 50px;
+    background: rgb(86, 175, 241);
+    width: 70px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  button.example1:hover {
+    background: rgb(66, 145, 211);
+  }
+  button.example2 {
+    padding: -10px 50px;
+    background: rgb(86, 175, 241);
+    width: 100px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  button.example2:hover {
+    background: rgb(66, 145, 211);
+  }
+</style>
+<div id="msg" class="msg">
+  <img src="img/logo.png" alt="logo">
+  <h2>SkyBBS</h2>
+</div>
+<div class="header">
+  <div class="doc">
+    <div class="dropdown">
+      <p class="dropbtn" style="color: white;margin-right: 100px;">帮助</p>
+      <ul class="dropdown-content" >
+        <li><a href="help.html">使用方法</a></li>
+        <li><a href="#example">与我们联系</a></li>
+        <li><a href="https://github.com/Aurora-Studio-Team/SkyBBS">Github</a></li>
+        <li><a href="#github">关于</a></li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <p class="dropbtn" style="color: white;margin-right: 80px;">导航</p>
+      <ul class="dropdown-content" >
+        <li><a href="index.html">主页</a></li>
+        <li><a href="login.html">登陆/注册</a></li>
+        <li><a href="#home">个人中心</a></li>
+        <li><a href="blog.html">发帖</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="user" style="text-align: center; margin-top: 50px; background-color: white;">
+  <p v-if="isLogin">欢迎，{{nowUser}}</p>
+  <input type="text" placeholder="邮箱" v-model="newEmail" v-if="!isLogin">
+  <input type="text" placeholder="用户名" v-model="newName" v-if="!isLogin">
+  <input type="password" placeholder="密码" v-model="newPassword" v-if="!isLogin">
+
+  <div style="display: flex; justify-content: center; margin: 10px auto;">
+    <button class="example1"  v-on:click="login" v-if="!isLogin" style="margin-right: 10px;">登录</button>
+    <button class="example1"  v-on:click="register" v-if="!isLogin">注册</button>
+  </div>
+  <button class="example1"   v-on:click="logout" v-if="isLogin" style="margin: 10px auto;">退出</button>
+  <button class="example2"  v-if="isLogin" style="margin: 10px auto;"><a href="blog.html">前往论坛>></a></button>
+</div>
+<script src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SkyBBS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="">
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:image:alt" content="">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#fafafbb">
+</head>
+
+<body>
+<div id="msg" class="msg">
+    <img src="img/logo.png" alt="logo">
+    <h2>SkyBBS</h2>
+</div>
+<div class="header">
+    <div class="doc">
+        <div class="dropdown">
+            <p class="dropbtn" style="color: white;margin-right: 100px;">帮助</p>
+            <ul class="dropdown-content" >
+                <li><a href="help.html">使用方法</a></li>
+                <li><a href="#example">与我们联系</a></li>
+                <li><a href="https://github.com/Aurora-Studio-Team/SkyBBS">Github</a></li>
+                <li><a href="#github">关于</a></li>
+            </ul>
+        </div>
+        <div class="dropdown">
+            <p class="dropbtn" style="color: white;margin-right: 80px;">导航</p>
+            <ul class="dropdown-content" >
+                <li><a href="index.html">主页</a></li>
+                <li><a href="login.html">登陆/注册</a></li>
+                <li><a href="#home">个人中心</a></li>
+                <li><a href="#about">发帖</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    <style>
+    p    {margin-left:2px;}
+    body {background-color:skyblue;}
+    </style>
+<div id="help">
+    <h1>使用方法</h1>
+    <p>SkyBBS是一个基于Web的论坛，您可以在这里吐槽你的感受、分享你的心得、点赞、评论、关注等。</p>
+    <h3>发帖</h3>
+    <p>点击主页右上角的“发帖”按钮，进入发帖页面，输入标题、内容、标签等信息，点击“发表”按钮即可发布帖子。</p>
+    <h3>回帖</h3>
+    <p>在帖子页面，点击“回帖”按钮，输入内容，点击“发表”按钮即可回帖。</p>
+    <h3>点赞</h3>
+    <p>在帖子页面，点击“点赞”按钮，即可给帖子点赞。</p>
+    <h3>评论</h3>
+    <p>在帖子页面，点击“评论”按钮，输入内容，点击“发表”按钮即可发布评论。</p>
+    <h3>关注</h3>
+    <p>在帖子页面，点击用户旁边的“关注”按钮，即可关注其他用户。</p>
+    <h3>个人中心</h3>
+    <p>点击主页右上角的“个人中心”按钮，进入个人中心页面，可以查看个人信息、发布的帖子、关注的用户等信息。</p>
+    <h3>与我们联系</h3>
+    <p>如果您有任何疑问、意见或建议，欢迎您与我们联系，我们将竭诚为您服务。</p>
+    <h2>更新日志</h2>
+    <h4>2024.10.5</h4>
+    <p>(Samuel)开始编写这个项目，制造导航栏</p>
+    <h4>2024.10.6</h4>
+    <p>(Samuel)搞定了用户功能</p>
+    <h4>2024.10.7</h4>
+    <p>(Samuel)发帖功能基本完工</p>
+    <h4>2024.10.8.13:11</h4>
+    <p>(lu114514ljh)login.html第35行，将#tutorial改为#help</p>
+    <h4>2024.10.8.13:26</h4>
+    <p>(lu114514ljh)blog.html第69、71、72、73行，其中，71、72的、p，/p改为 p class="margin"，/p，69，73增加p /p</p>
+    <h4> 2024.10.8.13:51 </h4>
+    <p> (lu114514ljh)在login.html中，增加直接跳转到blog页面的功能 </p>
+    <h4>2024.10.8.16:42 </h4>
+    <p> (Samuel)在login.html中，增加用户名检测，防止用户名重复注册 </p>
+    <h4> 2024.10.8.17:13 </h4>
+    <p> (Samuel)验证邮箱是否合法 </p>
+    <h4>2024.10.9.13:30</h4>
+    <p>(lu114514ljh)更改了大部分的按钮颜色，使其更加美观</p>
+    <h2>重要！！！2024.10.9.13:38</h2>
+    <p>在blog.html中，不登陆就可以发布帖子，需要返回相应的提示信息并检测用户是否登录！</p>
+    <h2>重要！！！2024.10.9.13:42</h2>
+    <p>(lu114514ljh)在login.html中，刷新后无法用注册后的信息登录(banglee)需要.txt文件存储信息！</p>
+    <h2>TODO</h2>
+    <ul>
+        <li>添加邮箱验证功能</li>
+        <li>添加密码修改功能</li>
+        <li>添加用户个人中心</li>
+        <li><strong>......</strong></li>
+    </ul>
+
+
+
+
+</div>
+<script src="js/app.js"></script>
+</body>
+
+</html>
