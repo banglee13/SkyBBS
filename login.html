@@ -22,6 +22,7 @@
 </head>
 
 <body>
+
 <style>
   button.example1 {
     padding: -10px 50px;
@@ -46,6 +47,7 @@
     background: rgb(66, 145, 211);
   }
 </style>
+
 <div id="msg" class="msg">
   <img src="img/logo.png" alt="logo">
   <h2>SkyBBS</h2>
@@ -54,7 +56,7 @@
   <div class="doc">
     <div class="dropdown">
       <p class="dropbtn" style="color: white;margin-right: 100px;">帮助</p>
-      <ul class="dropdown-content" >
+      <ul class="dropdown-content">
         <li><a href="help.html">使用方法</a></li>
         <li><a href="#example">与我们联系</a></li>
         <li><a href="https://github.com/Aurora-Studio-Team/SkyBBS">Github</a></li>
@@ -63,16 +65,16 @@
     </div>
     <div class="dropdown">
       <p class="dropbtn" style="color: white;margin-right: 80px;">导航</p>
-      <ul class="dropdown-content" >
+      <ul class="dropdown-content">
         <li><a href="index.html">主页</a></li>
         <li><a href="login.html">登陆/注册</a></li>
-        <li><a href="#home">个人中心</a></li>
+        <li><a href="user.html">个人中心</a></li>
         <li><a href="blog.html">发帖</a></li>
       </ul>
     </div>
   </div>
 </div>
-<div id="user" style="text-align: center; margin-top: 50px; background-color: white;">
+<div id="user" style="text-align: center; margin-top: 50px; background-color: rgb(166, 221, 239)">
   <p v-if="isLogin">欢迎，{{nowUser}}</p>
   <input type="text" placeholder="邮箱" v-model="newEmail" v-if="!isLogin">
   <input type="text" placeholder="用户名" v-model="newName" v-if="!isLogin">
@@ -85,7 +87,12 @@
   <button class="example1"   v-on:click="logout" v-if="isLogin" style="margin: 10px auto;">退出</button>
   <button class="example2"  v-if="isLogin" style="margin: 10px auto;"><a href="blog.html">前往论坛>></a></button>
 </div>
+<style>
+  html,
+  body {
+    background-image: linear-gradient(rgb(166, 221, 239),rgb(166, 221, 239));
+  }
+</style>
 <script src="js/app.js"></script>
 </body>
-
 </html>

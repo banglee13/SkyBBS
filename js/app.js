@@ -182,5 +182,10 @@ var app1 = new Vue({
     },
     created() {
         this.loadBlogs(); // 初始化时加载博客数据
+    },
+    computed: {
+        userBlogs() {
+            return this.blogs.filter(blog => blog.author === app.nowUser);
+        }
     }
 });
