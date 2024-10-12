@@ -19,12 +19,18 @@
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
   <style>
+    .big-border {
+      border: 5px groove;
+      padding: 20px;
+      margin-top:25px;
+      margin-left: 300px;
+      margin-right: 300px;
+
+    }
     html,
     body {
       background-image: linear-gradient(rgb(166, 221, 239),rgb(166, 221, 239));
     }
-  </style>
-  <style>
     p.margin {
       margin: 0px 30px;
     }
@@ -81,9 +87,9 @@
     <button class="example1" v-on:click="addBlog()" style="margin: 10px auto;">发布</button>
   </div>
   <div v-if="blogs.length === 0">
-    <p>还没有发布任何帖子...</p>
+    <p class="big-border">还没有发布任何帖子...</p>
   </div>
-  <div v-for="(blog, index) in blogs" :key="index">
+  <div v-for="(blog, index) in blogs" :key="index" class="big-border">
     <h2>{{ blog.title }}</h2>
     <p class="pre-wrap">{{ blog.content }}</p>
     <p>发布日期：{{ blog.createtime }}</p>
