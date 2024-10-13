@@ -4,8 +4,8 @@
 
 [THZ](https://github.com/FranklinCN)
 
-[samuel1229126](https://www.luogu.com.cn/user/1333713)
+[Samuel](https://github.com/samuel1229126)
 
-[banglee](https://www.luogu.com.cn/user/681292)
+[banglee](https://github.com/banglee13)
 
-[lu114514ljh](https://www.luogu.com.cn/user/862989)
+[lu114514ljh](https://github.com/lu114514ljh)
